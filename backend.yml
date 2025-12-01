@@ -29,7 +29,7 @@ Resources:
         WriteCapacityUnits: 5
       SSESpecification:
         SSEEnabled: true # Enable server-side encryption for the table
-          ECSSecurityGroup:
+  ECSSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for ECS tasks
@@ -278,7 +278,7 @@ Outputs:
   DynamoDBTableName:
     Description: "Name of the DynamoDB Table"
     Value: !Ref RoomsTable
-      ApplicationURL:
+  ApplicationURL:
     Description: "CloudFront Distribution URL"
     Value: !Sub "https://${CloudFrontDistribution.DomainName}"
   ECSClusterName:
